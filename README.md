@@ -1,0 +1,2 @@
+# ethash-go
+ethash-go
