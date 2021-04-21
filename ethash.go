@@ -165,7 +165,7 @@ func (l *Light) Verify(block Block) (bool, int64) {
 	target := new(big.Int).Div(maxUint256, difficulty)
 	ret := result.Big().Cmp(target) <= 0
 	actualDiff := new(big.Int).Div(maxUint256, result.Big())
-	return ret, actualDiff
+	return ret, actualDiff.Int64()
 }
 
 // compute() to get mixhash and result
